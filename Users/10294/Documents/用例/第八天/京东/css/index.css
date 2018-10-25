@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+}   
+i {
+    font-style: normal;
+}
+
+/* main主体 开始 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.jd {
+    height: 480px;
+    background-color: #eaeaea;
+    position: relative;
+}
+.jd-inner {
+    height: 480px;
+    position: relative;
+    z-index: 99999;
+}
+.ad a {
+    background: url(../images/bg.png) no-repeat top center;
+    height: 480px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.jd-col1 {
+    width: 190px;
+    height: 470px;
+    background-color: #FEFEFE;
+    float: left;
+    padding-top: 10px;
+}
+.jd-col1 span {
+    font-size: 12px;
+    color: #666;
+    margin-left: 1px;
+}
+.jd-col1 a {
+    font-size: 14px;
+    color: #666;
+    line-height: 27px;
+}
+.jd-col1 li {
+    padding-left: 15px;
+    height: 27px;
+}
+.jd-col1 li:hover {
+    background-color: #D8D8D8;
+}
+.jd-col1 a:hover {
+    color: #f10512;
+}
+.jd-col2 {
+    width: 790px;
+    height: 480px;
+   
+    float: left;
+    margin: 0 10px;
+
+}
+.jd-col2-hd {
+    position: relative;
+
+}
+.jd-col2-hd li {
+  height: 340px;
+
+}
+.jd-col2-hd a {
+    line-height: 60px;
+    color: #eee;
+    text-align: center;
+
+}
+.choice {
+    height: 20px;
+    width: 180px;
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -90px;
+    border-radius: 10px;
+}
+.choice li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    float: left;
+    margin: 4px 5px;
+}
+.choice li:hover {
+    background-color: #f10215;
+}
+
+.jd-col2-bd div {
+    height:130px ;
+    width:390 px ;
+    float: left;
+    margin-top: 10px;
+}
+.jd-col2-bd {
+    width: 790px;
+    height: 130px;
+   
+}
+.jd-col2-bd .r {
+    float: right;
+}
+.arr-l, .arr-r {
+    font-family: "icomoon";
+    height: 60px;
+    width: 30px;
+    background-color:rgba(0,0,0,0.2) ;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+}
+.arr-l {
+    left: 0;
+}
+.arr-r {
+    right: 0;
+}
+.arr-l:hover,.arr-r:hover {
+    background-color:rgba(0,0,0,0.4) ;
+}
+
+.jd-col3 {
+    width: 190px;
+    height: 480px;
+    float: right;
+    background-color: #fff;
+    font-size: 12px;
+    color: #747474;
+}
+.jd-col3 a {
+    font-size: 12px;
+    color: #747474;
+}
+.jd-col3 a:hover {
+    color: #f10215;
+}
+.user {
+    height: 95px;
+    padding: 20px 15px 0;
+}
+.user-info {
+    height: 40px;
+    padding-left: 54px;
+    font-size: 12px;
+    color: #747474;
+    line-height: 22px;
+    position: relative;
+}
+.user-info a {
+    font-size: 12px;
+    color: #747474;
+}
+.user-info a:hover {
+    color: #f10215;
+}
+.info-img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.info-img img {
+    width: 100%;
+    height: auto;
+}
+.user-profit a {
+    margin-top: 15px;
+    width: 70px;
+    height: 20px;
+    display: inline-block;
+    color: #e01222;
+    border: 2px solid #e01222;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+.plus {
+    margin-left: 5px;
+}
+.user-profit a:hover {
+    color: #fff;
+    background-color: #e01222;
+}
+
+.news {
+    height: 144px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+.tab-hd {
+    width: 165px;
+    
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    position: relative;
+}
+.cuxiao {
+    padding-left: 2px;
+    padding-right: 10px;
+}
+.gonggao {
+    margin-left: 10px;
+    margin-right: 60px;
+}
+.tab-hd a {
+    line-height: 24px;
+}
+.line {
+    width: 28px;
+    height: 2px;
+    background-color: #f10215;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.tab-bd li a {
+    line-height: 30px;
+}
+.tab-bd {
+    padding-left: 12px;
+}
+
+.jd-service {
+    height: 209px;
+    overflow: hidden;
+}
+.jd-service ul {
+    width: 195px;
+}
+.jd-service li {
+    height: 69px;
+    width: 47px;
+    float: left;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.jd-service li i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 19px;
+    background: url(../images/sprite_fs@1x.png) no-repeat;
+   
+    
+}
+.jds1 {
+    background-position:0 0;
+}
+.jd-service .jds2 {
+    background-position:-42px 0;
+}
+.jd-service .jds3 {
+    background-position:-88px 0;
+}
+.jd-service .jds4 {
+    background-position:-132px 0;
+}
+.jd-service .jds5 {
+    background-position: 0 -44px;
+}
+.jd-service .jds6 {
+    background-position: -42px -44px;
+}
+.jd-service .jds7 {
+    background-position: -88px -44px;
+}
+.jd-service .jds8 {
+    background-position: -132px -44px;
+}
+.jd-service .jds9 {
+    background-position: 0 -88px;
+}
+.jd-service .jds10 {
+    background-position: -42px -88px;
+}
+.jd-service .jds11 {
+    background-position: -88px -88px;
+}
+.jd-service .jds12 {
+    background-position: -132px -88px;
+}
+.jd-service p {
+    text-align: center;
+}
+/* main主体 结束 */
