@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 用精灵图实现 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+           height: 120px;
+           transition: all 0.4s;
+           float: left;
+           margin-left: 20px;
+        }
+       .one {
+           background: url(1.jpg) no-repeat 0 0;  
+           background-size: 100% auto;        
+       }
+       .one:hover {
+        background: url(1.jpg) no-repeat -20px 0;
+        background-size: 100% auto;
+       }
+       .two {
+           background: url(2.jpg) no-repeat 0 0;    
+           background-size: 100% auto;      
+       }
+       .two:hover {
+        background: url(2.jpg) no-repeat -20px 0;
+        background-size: 100% auto;
+       }
+       .three {
+           background: url(3.jpg) no-repeat 0 0;   
+           background-size: 100% auto;       
+       }
+       .three:hover {
+        background: url(3.jpg) no-repeat -20px 0;
+        background-size: 100% auto;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="one">
+        <a href="#"></a>
+    </div>
+    <div class="two"><a href="#"></a></div>
+    <div class="three"><a href="#"></a></div>
+    
+</body>
+</html>
