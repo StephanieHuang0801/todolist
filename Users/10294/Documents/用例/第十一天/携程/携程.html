@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ctrip.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            min-width: 320px;
+            max-width: 540px;
+            font-size: 14px/1.5;
+            margin: 30px auto;
+        }
+        header {
+            height: 108px;
+            width: 100%;
+        }
+        header img {
+            height: 100%;
+            width: auto;
+        }
+        .nav a {
+            text-decoration: none;
+            font-size: 14px;
+            color:#fff;
+            text-shadow: 0 2px 1px rgba(0,0,0,.2);
+        }
+        .row {
+            display: flex;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 20px;
+            padding: 4px;
+            box-sizing: border-box;
+        }
+        .row div {
+            width: 100%;
+            flex: 1;
+            background-color: #ff697a;
+           border-right: 1px solid #fff;
+        }
+        .row2 div {
+            background-color: #4D9AED;
+        }
+        .row3 div {
+            background-color: #43C794;
+        }
+        .row div:last-child {
+            border-right: 0;
+        }
+        .row33 {
+            display: flex;
+            flex-direction: column;
+        }
+        .row33 a {
+            flex: 1;
+            width: 100%;
+            border-bottom:  1px solid #fff;
+            text-align: center;
+            line-height: 42px;
+        }
+        .row33 a:last-child {
+            border-bottom: 0;
+        }
+        .jiudian {
+            text-align: center;
+            padding: 10px;
+        }
+        .jiudian .jiudian-p {
+            height: 44px;
+            width: 44px;
+            background: url(ctrip.png) no-repeat 0 -127px;
+            background-size: 104px;
+            margin: 0 auto;
+        }
+        .jipiao {
+            text-align: center;
+            padding: 10px;
+        }
+        .jiudian .jipiao-p {
+            height: 44px;
+            width: 44px;
+            background: url(ctrip.png) no-repeat 0 -291px;
+            background-size: 104px;
+            margin: 0 auto;
+        }
+        .lvyou {
+            text-align: center;
+            padding: 10px;
+        }
+        .lvyou .lvyou-p {
+            height: 44px;
+            width: 44px;
+            background: url(ctrip.png) no-repeat 0 -180px;
+            background-size: 104px;
+            margin: 0 auto;
+        }
+        /* .additional {
+            display: flex;
+            flex-direction: column;
+        }
+        .additional a {
+            border-bottom: 1px solid #fff;
+            flex: 1;
+            width: 100%;
+        }
+        .additional a:last-child {
+            border-bottom: 0;
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="banner.jpg" alt="">
+    </header>
+    <div class="nav">
+        <!-- 第一个 -->
+        <div class="row">
+            <div class="jiudian">
+                <a href="#">
+                    <span>酒店</span>
+                    <div class="jiudian-p"></div>
+                </a>
+            </div>
+            <div class="row33">
+                <a href="#">海外酒店</a>
+                <a href="#">特价酒店</a>
+            </div>
+            <div class="row33">
+                    <a href="#">团购</a>
+                    <a href="#">同福客栈</a>
+                </div>
+        </div>
+        <!-- 第二个 -->
+        <div class="row2 row">
+                <div class="jiudian">
+                    <a href="#">
+                        <span>机票</span>
+                        <div class="jipiao-p"></div>
+                    </a>
+                </div>
+                <div class="row33">
+                    <a href="#">火车票</a>
+                    <a href="#">特价机票</a>
+                </div>
+                <div class="row33">
+                        <a href="#">汽车票▪船票</a>
+                        <a href="#">专车·租车</a>
+                    </div>
+            </div>
+            <!-- 第三个         -->
+            <div class="row3 row">
+                    <div class="lvyou">
+                        <a href="#">
+                            <span>旅游</span>
+                            <div class="lvyou-p"></div>
+                        </a>
+                    </div>
+                    <div class="row33">
+                        <a href="#">门票</a>
+                        <a href="#">目的地攻略</a>
+                    </div>
+                    <div class="row33">
+                            <a href="#">游轮旅行</a>
+                            <a href="#">定制旅行</a>
+                        </div>
+                </div>
+        <!-- 额外补充第四个 -->
+        <div class="row">
+                <div class="jiudian row33">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="row33">
+                    <a href="#">火车票</a>
+                    <a href="#">特价机票</a>
+                </div>
+                <div class="row33">
+                        <a href="#">汽车票▪船票</a>
+                        <a href="#">专车·租车</a>
+                    </div>
+            </div>
+    </div>
+    
+</body>
+</html>
