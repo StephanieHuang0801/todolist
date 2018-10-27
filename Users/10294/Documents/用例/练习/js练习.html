@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习</title>
+</head>
+
+<body>
+    <script>
+        // 注意：prompt返回数据类型是字符串
+        //注意，"string"要加引号
+        console.log("1:检测一个变量是一个String类型");
+        console.log(isString(125));
+       //
+        function isString(test) {
+            if (typeof test == "string") {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+        console.log("2:计算1-10000中出现的0 的次数 ");
+        //计算1-10000中出现的0 的次数 
+        //  注意：toString（）要加括号
+        console.log(count(100));
+        //求一个数中出多少次0
+        function countZero(number) {
+            var number = number.toString();
+            var count = 0;
+            for (var i = 0; i < number.length; i++) {
+                if (number[i] == 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        //每个数出现0的次数的累加 
+        //注意：sum的初始化要写到for循环的外面
+        function count(max) {
+            var arr = [];
+            for (var i = 1; i <= max; i++) {
+                arr[i - 1] = countZero(i);
+            }
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+
+                sum += arr[i];
+            }
+            return sum;
+        }
+        console.log("3: 找出元素 item 在给定数组 arr 中的位置");
+        console.log(indexOf([ 1, 2, 3, 4 ], 3));
+        function indexOf(arr, item) {
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == item) {
+                    return i;
+                } 
+            }
+            return -1;
+        }
+     
+
+
+    </script>
+</body>
+
+</html>
