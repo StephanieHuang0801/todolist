@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo1028</title>
+</head>
+<body>
+<script>
+// console.log("1:创建对象");
+// var dog=new Object();
+// dog.name="DaHuang";
+// dog.age="3-year-old";
+// dog.weight="125kg";
+// dog.hobby=function() {
+//     console.log("his favorite food is bone");
+// };
+// console.log(dog.name);
+// console.log(dog.age);
+// console.log(dog.weight);
+// dog.hobby();
+// console.log("2:创建对象");
+// var iphone=new Object();
+// iphone.model="iphoneXS";
+// iphone.color="galaxyGary";
+// iphone.call=function(){
+//     console.log("call somebody");
+// };
+// iphone.text=function(){
+//     console.log("text somebody");
+// };
+// console.log(iphone.model);
+// console.log(iphone.color);
+// iphone.call();
+// iphone.text();
+// console.log("3:创建对象");
+// function Person(name,age){
+//     this.name=name;
+//     this.age=age;
+//     this.sayHi=function(){
+//         console.log("My name's "+this.name+"."+" I'm "+this.age+" years old");
+//     };
+// }
+// var Bosco=new Person("Bosco",18);
+// Bosco.sayHi();
+// var Yoona=new Person("Yoona",16);
+// Yoona.sayHi();
+// console.log(Bosco instanceof Person);
+// console.log(Yoona instanceof Person);
+// console.log("4:创建对象");
+// function Picture(width,height,size){
+//     this.width=width;
+//     this.height=height;
+//     this.size=size;
+//     this.showDetail=function(){
+//         console.log("width:"+this.width+", "+"height:"+this.height+", "+"size:"+this.size);
+//     };
+// }
+// function Kitty(color,weight,age){
+//     this.color=color;
+//     this.weight=weight;
+//     this.age=age;
+//     this.catchMouse=function(){
+//         console.log("I can catch mouses.");
+//     };
+//     this.fight=function(){
+//         console.log("I'm a"+" "+this.color+" "+this.weight+"kg"+" "+this.age+" year-old super lion.");
+//     }
+// }
+// var pic=new Picture(100,100,100);
+// pic.showDetail();
+// var hellokitty=new Kitty("white",5,8);
+// hellokitty.catchMouse();
+// hellokitty.fight();
+// console.log(pic instanceof Picture);
+// console.log(pic instanceof Kitty);
+// console.log(hellokitty instanceof Kitty);
+// console.log(hellokitty instanceof Picture);
+
+
+// console.log("5:json");
+// var json={
+//     "name":"libai",
+//     "age":"18",
+//     "sex":"male"
+// }
+// for(var key in json){
+//     console.log(key+":"+json[key]);
+    
+// }
+// console.log("6");
+// function f1(x){
+//     x=100;
+// }
+// var num=10;
+// f1(num);
+// console.log(num);//10
+
+// console.log("7");
+// var num1=55;
+// var num2=66;
+// function f1(num,num1){
+//     num=100;
+//     num1=100;
+//     num2=100;
+//     console.log(num);
+//     console.log(num1);
+//     console.log(num2);
+// }
+// f1(num1,num2);
+// console.log(num1);//55
+// console.log(num2);//100
+// //console.log(num);//报错
+// console.log("8");
+// function Person(name,age,salary){
+//     this.name=name;
+//     this.age=age;
+//     this.salary=salary;
+// }
+// function f1(person){
+//     person.name="ls";
+//     person=new Person("aa",18,10);
+// }
+// var p=new Person("zs",18,1000);
+// console.log(p.name);//zs
+// f1(p);
+// console.log(p.name);//ls
+// console.log("9:");
+// var computer=new Object();
+// computer.color="white";
+// computer.weight=" 2kg";
+// computer.brand=" Dell";
+// computer.movie=function(){
+//     console.log("可以看电影");
+// };
+// computer.detail=function(){
+//     console.log(this.color+this.weight+this.brand);
+// };
+// computer.movie();
+// computer.detail();
+// console.log("10:");
+// function creatMouse(width,height){
+//     var mouse=new Object();
+//     mouse.width=width;
+//     mouse.height=height;
+//     mouse.detail=function(){
+//         console.log(mouse.width+" "+mouse.height);
+//     };
+//     return mouse;
+// }
+// var mouse1=creatMouse("50","100");
+// mouse1.detail();
+// var mouse2=creatMouse("20","20");
+// mouse2.detail();
+// function Mouse(width,height){
+//     this.width=width;
+//     this.height=height;
+//     this.detail=function(){
+//     console.log(this.width+" "+this.height);
+//     };
+// }
+// var mouse3=new Mouse("999","999");
+// mouse3.detail();
+
+// console.log("11:");
+// var car={
+//     weight:"100kg",
+//     color:" red",
+//     brand:" BMW",
+//     pickUp:function(){
+//         console.log(car.weight+car.color+car.brand);
+//     }
+// }
+// car.pickUp();
+console.log("一：调用系统函数");
+var car=new Object();
+car.weight="100kg";
+car.color=" red";
+car.brand=" Honda";
+car.detail=function(){
+    console.log(car.weight+car.color+car.brand);
+};
+car.detail();
+
+console.log("二：工厂模式");
+function creatLaptop(color,weight,brand){
+    var laptop=new Object();
+    laptop.color=color;
+    laptop.weight=weight;
+    laptop.brand=brand;
+    laptop.detail=function(){
+        console.log(this.color+this.weight+this.brand);
+    };
+    return laptop;
+}
+laptop1=creatLaptop("red ","1kg ","Acer");
+laptop1.detail();
+laptop2=creatLaptop("gray ","1.5kg ","Dell");
+laptop2.detail();
+laptop3=creatLaptop("blue ","0.8kg ","Lenovo");
+laptop3.detail();
+console.log("三：自定义函数");
+function Laptop(value){
+    this.value=value;
+    this.detail=function(){
+    console.log(this.value);
+    };
+}
+var lap1=new Laptop("4000元的本子");
+lap1.detail();
+var lap2=new Laptop("八百刀的本子");
+lap2.detail();
+console.log("四：字面量");
+var box={
+    width:"100宽",
+    height:"200高",
+    detail:function(){
+        console.log(box.width+box.height);
+    }
+}
+box.detail();
+console.log("五：json");
+var json={
+    "width":"100宽",
+    "height":"200高",
+}
+    for(var key in json){
+        console.log(key);
+        console.log(json[key]);
+    }
+    json["width"]="99999宽";
+    for(var key in json){
+        console.log(key);
+        console.log(json[key]);
+    }    
+</script>
+</body>
+</html>
