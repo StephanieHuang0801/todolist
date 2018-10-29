@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>**1029**</title>
+</head>
+<body>
+    <script>    
+    console.log("1:自定义一个对象，实现max方法");
+    function Getmax(){        
+        this.getMax=function(){
+            var max=arguments[0];
+            for(var i=0;i<arguments.length;i++){
+                if(max<arguments[i]){
+                    max=arguments[i];
+                }
+            }
+            console.log(max);
+        };
+    }
+    var arr=new Getmax;
+    arr.getMax(1,2,3,4,5);   
+
+    console.log("2:随机产生一个十六进制的颜色值");
+    function getColor(){
+        var str="#";
+        var arr=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+        for (var i=0;i<6;i++){
+            sup=parseInt(Math.random()*16);
+            str+=arr[sup];
+        }
+        console.log(str);
+    }
+    getColor();
+
+    console.log("3:Date:格式化日期");  
+    function getDate(dt){
+        var year=dt.getFullYear();
+        var month=dt.getMonth()+1;
+        var date=dt.getDate();
+        var day=dt.getDay();
+        var hour=dt.getHours();
+        var minute=dt.getMinutes();
+        var second=dt.getSeconds();
+        month=month<9?"0"+month:month;
+        date=date<10?"0"+date:date;
+        hour=hour<10?"0"+hour:hour;
+        minute=minute<10?"0"+minute:minute;
+        second=second<10?"0"+second:second;
+        switch(day){
+            case 0: day="日";break;
+            case 1: day="一";break;
+            case 2: day="二";break;
+            case 3: day="三";break;
+            case 4: day="四";break;
+            case 5: day="五";break;
+            case 6: day="六";break;
+        }
+        console.log(year+"年"+month+"月"+date+"日"+" "+"星期"+day+" "+hour+":"+minute+":"+second);
+     
+    }
+    getDate(new Date());
+
+    // console.log("4:String:从一段文字中截取目标字符串");    
+    // var str="更不用说第一位的孟美岐和第二位的吴宣仪同时退团，让杨超越成为了天选C位。";
+    // var aim=prompt("请输入要截取的文字内容")
+    // var key=str.indexOf(aim);
+    // alert(str.substr(key,aim.length));
+
+    // console.log("5:String:输出一段文字中目标文字出现的次数"); 
+    // var str="颜值与实力俱佳的她正是直女们想成为的那种人啊，所以直女们普遍都喜欢孟美岐。";
+    // var arr=[];
+    // var aim=prompt("请输入要查找的文字内容")
+    // arr[0]=str.indexOf(aim);//11
+    // arr[1]=str.indexOf(aim,12);
+    // if(arr[0]==-1){//这个字不存在
+    //     alert("没有目标文字");
+    // }else{//这个字存在
+    //     for(var j=1;arr[j-1]!=-1;j++){
+    //         arr[j]=str.indexOf(aim,arr[j-1]+1);
+    //     }
+    //     var count=arr.length-1;
+    //      alert("该字一共出现"+count+"次");
+    // }
+   
+    // console.log(arr);
+
+    // console.log("5:String:输出一段文字中目标文字出现的次数, 重点"); 
+    // var str="颜值与实力俱佳的她正是直女们想成为的那种人啊，所以直女们普遍都喜欢孟美岐。";
+    // var aim=prompt("请输入要查找的文字内容");
+    // var index=0;
+    // var count=0;
+    // while((index=str.indexOf(aim,index))!=-1){
+    //     count++;
+    //     index+=aim.length;
+    // }
+    //   alert("该字段一共出现"+count+"次");
+
+    console.log("6:String:输出一段文字中每个文字出现的次数, 重点"); 
+ //创建一个空对象；把字母作为键，次数作为值，添加到对象并遍历（json）
+ //判断是否有键，写在if里，若没有这个键（else），创建它并且赋值为1
+    var str="士多啤梨啤梨苹果橙，苹果橙，士多啤梨点样捡";
+    var obj={};
+    for(var i=0;i<str.length;i++){
+        var key=str[i];
+        if(obj[key]){
+            obj[key]++;
+        }else{
+            obj[key]=1;
+        }
+    }
+    for(var key in obj){
+        console.log(key+":"+obj[key]);
+    }
+    
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
+
