@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>***1030刚才什么鬼***</title>
+    <style>
+        body {
+            line-height: 30px;
+        }
+        .cls {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body id="bd">
+    <input type="button" value="创始人性别" id="sex" >
+    <input type="radio" value="0" name="sex">保密
+    <input type="radio" value="1" name="sex" id="female">女
+    <input type="radio" value="2" name="sex">男
+    <br>
+
+    <input type="button" value="pick的小姐姐" id="xjj" >
+    <input type="checkbox" value="1" >孟美岐
+    <input type="checkbox" value="2" >吴宣仪
+    <input type="checkbox" value="3" id="ycy">杨超越
+    <input type="checkbox" value="4" >傅菁
+    <input type="checkbox" value="5" >Yamy
+    <input type="checkbox" value="6" >李子璇
+    <br>
+
+    <input type="button" value="本场点赞王" id="dzw" >    
+    <select>
+        <option value="1">孟美岐</option>
+        <option value="2">吴宣仪</option>
+        <option value="3">杨超越</option>
+        <option value="4">傅菁</option>
+        <option value="5" id="xjy">许靖韵</option>
+        <option value="6">李子璇</option>
+
+    </select>
+    <br>
+    <textarea name="" id="tt" cols="30" rows="10" readonly></textarea>
+    <input type="button" id="result" value="决赛结果">
+    <br>
+    <input type="submit" value="提交" id="tijiaoBtn">
+    <input type="button" value="隐藏" id="ycBtn">
+    <input type="button" value="开/关灯" id="deng">
+    <div id="divTj">成功</div>
+    
+    <script src="common.js"></script>
+    <script>
+
+    my$("sex").onclick=function() {
+        my$("female").checked=true;
+    };
+    my$("xjj").onclick=function() {
+        my$("ycy").checked=true;
+    };
+    my$("dzw").onclick=function() {
+        my$("xjy").selected=true;
+    };
+    my$("result").onclick=function(){
+        my$("tt").value="第一名：孟美岐；第二名：吴宣仪；第三名：杨超越；第四名：段奥娟；第五名：yamy；第六名：赖美云；第七名：紫宁；第八名：sunnee；第九名：李紫婷；第十名：傅菁；第十一名：徐梦洁。";
+    };
+    my$("tijiaoBtn").onclick=function() {
+        my$("divTj").style.backgroundColor="red";
+        my$("divTj").style.width="40px";
+        my$("divTj").style.height="40px";
+        my$("divTj").style.borderRadius="50%";
+        my$("divTj").style.lineHeight="40px";
+        my$("divTj").style.textAlign="center";
+    };
+    my$("ycBtn").onclick=function(){
+        if(this.value=="隐藏"){
+            my$("divTj").style.display="none";
+            this.value="显示";
+        }else if(this.value=="显示"){
+            my$("divTj").style.display="block";
+            this.value="隐藏";
+        }
+
+    };
+    my$("deng").onclick=function(){
+        document.body.className=document.body.className!="cls"?"cls":"";
+    };
+    
+    </script>
+
+</body>
+</html>

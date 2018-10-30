@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>**1030webapi**</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        padding: 20px 10px;
+        background-color:pink;
+        font-family: Arial "微软雅黑";
+        font-size: 16px;
+        color: #666;
+    }
+    input {
+
+        margin:20px 50px 50px 0;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .picture {
+        position: absolute;
+        right:20px;
+        top:30px;
+        height: 155px;
+        width: 155px;
+        border: 1px solid #ccc;
+
+    }
+
+  
+    </style>
+    <base target="_blank" />
+</head>
+<body>
+    <div class="picture"><img src="" alt="" width="150" height="150" id="imgqiehuan"></div>
+    <button id="button1"style="width:80px; height:25px;">pick me</button>
+    <button id="button2"style="width:80px; height:25px;">pick me</button>
+    <button id="button3"style="width:80px; height:25px;">pick me</button>
+    <br>
+
+
+    <input type="button" value="Tiffany" id="Tiffany">
+    <a href="" id="aTiffany"></a>
+    <input type="button" value="Yoona" id="Yoona">
+    <a href="" id="aYoona"></a>
+    <input type="button" value="Taeyon" id="Teayon">
+    <a href="" id="aTaeyon"></a>
+    <input type="button" value="Jessica" id="Jessica">
+    <a href="" id="aJessica"></a>
+    <input type="button" value="Krystal" id="Krystal">
+    <a href="" id="aKrystal"></a>
+    <p id="pTiffany">Tiffany Hwang</p>
+    <input type="text" style="width: 150px; height:20px;margin-top: 10px;">
+    <img src="" alt="" id="imgTiffany">
+    <p id="pYoona">Yoona Lim</p>
+    <input type="text" style="width: 150px; height:20px;margin-top: 10px;">
+    <img src="" alt="" id="imgYoona">
+    <p id="pTaeyon">Teayon Kim</p>
+    <input type="text"style="width: 150px; height:20px;margin-top: 10px;">
+    <img src="" alt="" id="imgTeayon">
+    <p id="pJessica">Jessica Jung</p>
+    <input type="text" style="width: 150px; height:20px;margin-top: 10px;">
+    <img src="" alt="" id="imgJessica">
+    <p id="pKrystal">Krystal Jung</p>
+    <input type="text" style="width: 150px; height:20px;margin-top: 10px;">
+    <img src="" alt="" id="imgKrystal">
+   <div class="div1" id="div1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="div2" id="div2">
+        <span>Girls' Generation</span>
+        <span>Girls' Generation</span>
+        <span>Girls' Generation</span>
+        <span>Girls' Generation</span>
+        <span>Girls' Generation</span>
+    </div>
+    <script>
+         var buttonObjs=document.getElementsByTagName("button");
+
+         for(var j=0;j<buttonObjs.length;j++){
+            buttonObjs[j].onclick=function(){ 
+                for(var i=0;i<buttonObjs.length;i++){
+                    buttonObjs[i].innerText="pick me";  
+                    this.innerText="C位出道！";
+                }
+            };
+              
+        }
+
+
+        document.getElementById("Tiffany").onclick=function(){
+            document.getElementById("imgTiffany").src="images/4.jpg";
+            document.getElementById("imgTiffany").width="150";
+            document.getElementById("imgTiffany").height="150";
+            document.getElementById("imgTiffany").alt="黄美英的头像";
+            document.getElementById("imgTiffany").title="黄美英";
+            document.getElementById("pTiffany").innerText="黄美英";
+            document.getElementById("aTiffany").innerText="黄美英";          
+            document.getElementById("aTiffany").href="https://baike.baidu.com/item/%E9%BB%84%E7%BE%8E%E8%8B%B1/34786?fr=aladdin";     
+            var spanObjs=document.getElementById("div1").getElementsByTagName("span");
+            for(var i=0;i<spanObjs.length;i++){
+                spanObjs[i].innerText="现在是少女时代";    
+            } 
+            
+
+        };
+        document.getElementById("imgTiffany"). onclick=function(){
+            alert("全团总受黄帕尼！");
+            this.width="100";
+            this.height="100";
+
+        };
+
+        document.getElementById("Teayon").onclick=function(){
+            document.getElementById("imgTeayon").src="images/3.jpg";
+            document.getElementById("imgTeayon").width="150";
+            document.getElementById("imgTeayon").height="150";
+            document.getElementById("pTaeyon").innerText="金泰妍";
+            document.getElementById("aTaeyon").innerText="金泰妍";          
+            document.getElementById("aTaeyon").href="https://baike.baidu.com/item/%E9%87%91%E6%B3%B0%E5%A6%8D/10161227?fr=aladdin";  
+
+        };
+        document.getElementById("imgTeayon"). onclick=function(){
+            alert("短身总攻金泰妍")
+        };
+        document.getElementById("Yoona").onclick=function(){
+            document.getElementById("imgYoona").src="images/6.jpg";
+            document.getElementById("imgYoona").width="150";
+            document.getElementById("imgYoona").height="150";
+            document.getElementById("pYoona").innerText="林允儿";
+            document.getElementById("aYoona").innerText="林允儿";          
+            document.getElementById("aYoona").href="https://baike.baidu.com/item/%E6%9E%97%E5%85%81%E5%84%BF/6062189?fr=aladdin";  
+        };
+        document.getElementById("imgYoona"). onclick=function(){
+            alert("幼稚总攻林润鹅")
+        };
+        document.getElementById("Jessica").onclick=function(){
+            document.getElementById("imgJessica").src="images/5.jpg";
+            document.getElementById("imgJessica").width="150";
+            document.getElementById("imgJessica").height="150";
+            document.getElementById("pJessica").innerText="郑秀妍";
+            document.getElementById("aJessica").innerText="郑秀妍";          
+            document.getElementById("aJessica").href="https://baike.baidu.com/item/%E9%83%91%E7%A7%80%E5%A6%8D/8773584?fr=aladdin";  
+        };
+
+        document.getElementById("imgJessica"). onclick=function(){
+            alert("冰山女王杰西卡")
+        };
+        document.getElementById("Krystal").onclick=function(){
+            document.getElementById("imgKrystal").src="images/2.jpg";
+            document.getElementById("imgKrystal").width="150";
+            document.getElementById("imgKrystal").height="150";
+            document.getElementById("pKrystal").innerText="郑秀晶";
+            document.getElementById("aKrystal").innerText="郑秀晶";          
+            document.getElementById("aKrystal").href="https://baike.baidu.com/item/%E9%83%91%E7%A7%80%E6%99%B6/3136367?fr=aladdin";  
+            var inputObjs=document.getElementsByTagName("input");
+            for(var i=0;i<inputObjs.length;i++){
+                if(inputObjs[i].type=="text"){
+                    inputObjs[i].value="少时成员";
+                }
+            }
+        };
+        document.getElementById("imgKrystal"). onclick=function(){
+            alert("em....素囧啊")
+        };
+
+    </script>
+</body>
+</html>
