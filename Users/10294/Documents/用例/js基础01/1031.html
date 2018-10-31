@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>****1031*****</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 2000px;
+        }
+        li {
+            list-style: none;
+            cursor: pointer;
+        }
+        .cls1 {
+        background-color:pink;
+    }
+    .cls2 {
+        width: 80px;
+        height: 80px;
+        margin: auto 15px;
+        border: 2px solid white;
+    }
+    .cls3 {
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+
+    }
+    .cls4 {
+
+         width: 400px;
+        margin: 20px;
+        text-align: center; 
+    }
+    .picture {
+      /* border: 5px solid red; */
+    }
+    .xianshi {
+        display: block;
+    }
+    .yincang {
+        display: none;
+    }
+    .dingwei {
+
+        position: absolute;
+        bottom: -98px;
+        left: 100px;        
+    }
+    .father {
+        position: relative;
+    }
+    .yellow {
+        background-color: yellow;
+    }
+    .box {
+        width: 300px;
+        height: 200px;
+        border: 2px solid red;
+        background-color: #ccc;
+    }
+    .bd {
+        position: relative;
+        height: 180px;
+        background:pink;
+    }
+    .bd li {
+        position: absolute;
+        display: none;
+
+    }
+    li.current {
+
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+    span.current {
+        background-color:pink;
+    }
+  
+    </style>
+    <!-- style----------------------------------------------------------------------------------------------------------------------------------------------- -->
+</head>
+
+<body>
+    <input type="button" value="禁用文本框" id="btn1">
+    <input type="text" value="produce 101" id="tt1">
+    <br>
+
+    <input type="button" value="改变颜色" id="btn2">
+    <div id="dv1">
+        <ul>
+            <li>孟美岐</li>
+            <li>吴宣仪</li>
+            <li>杨超越</li>
+            <li>陈意涵</li>
+        </ul>
+    </div>
+
+    <a href="http://www.baidu.com" id="a1">打开病毒</a><br>
+
+    <a href="images/2.jpg" id="a2"><img src="images/1.jpg" width="50" height="50"></a><br>
+    <img id="img1"><br>
+
+    <div class="picture" id="dv2">
+        <h3 style="margin: auto 10px 20px;">少时头像</h2>
+            <a href="images/5.jpg" id="s1" title="郑秀妍"><img src="images/5.jpg" alt="" class="cls2"></a>
+            <a href="images/2.jpg" id="s2" title="郑秀晶"><img src="images/2.jpg" alt="" class="cls2"></a>
+            <a href="images/3.jpg" id="s3" title="金泰妍"><img src="images/3.jpg" alt="" class="cls2"></a>
+            <a href="images/4.jpg" id="s4" title="黄美英"><img src="images/4.jpg" alt="" class="cls2"></a>
+            <br>
+
+
+    </div>
+    <img src=" " class="cls3" id="bimg"><br>
+    <p id="p1" class="cls4"></p>
+
+    <div id="changeColor">
+        <input type="button" value="黄色变粉" id="btn88">
+        <input value="隔行变色" type="button" id="btnCC"><br>
+
+        <p class="yellow">郑秀妍</p>
+        <p>郑秀晶</p>
+        <p>金泰妍</p>
+        <p class="yellow">黄美英</p>
+        <p>孟美岐</p>
+        <p>吴宣仪</p>
+        <p>杨超越</p>
+        <p class="yellow">陈意涵</p>
+    </div>
+
+<div id="dv10">
+    <ul>
+        <li>少女时代</li>
+        <li>f(x)</li>
+        <li>T-ara</li>
+        <li>火箭少女101</li>
+        <li>宇宙少女</li>
+    </ul>
+</div>
+<div class="father">
+        <img src="images/1.jpg" alt="" id="yy1" width="50" height="50">
+        <img src="images/yymsn.jpg" alt="" id="yy2" width="200" height="150" class="dingwei yincang">
+</div>
+<div id="dv66">
+    <input type="button" value="统计" id="btn66"><br>
+    <input type="text" value="孟美岐" name="name2" ><br>
+    <input type="text" value="李白" name="name1" ><br>
+    <input type="text" value="李白" name="name1" ><br>
+    <input type="text" value="吴宣仪" name="name3" ><br>
+    <input type="text" value="李白" name="name1" ><br>
+    <input type="text" value="傅菁" name="name4" ><br>
+    <input type="text" value="李白" name="name1" ><br>
+    <input type="text" value="李白" name="name1" ><br>
+</div><hr>
+
+<input type="text" value="杨超越" id="txt" style="color: gray;"><br>
+<input type="password" id="psd"><br>
+<input type="button" value="弹出输入内容" id="shuru"><br>
+<textarea name="" id="" cols="30" rows="10"></textarea><br>
+<hr>
+<div class="box">
+    <div class="hd" id="biaoti">
+        <span class="current">杨超越</span>
+        <span>孟美岐</span>
+        <span>吴宣仪</span>
+        <span>傅菁</span>
+    </div>
+    <div class="bd" id="neirong">
+        <ul>
+            <li class="current">杨超越生日：1998年7月31日</li>
+            <li>孟美岐生日：1998年10月15日</li>
+            <li>吴宣仪生日：1995年1月26日</li>
+            <li>傅菁生日：1995年6月2日</li>
+        </ul>
+    </div>
+</div>
+
+<!-- js------------------------------------------------------------------------------------------------------------------------------ -->
+    <script src="common.js"></script>
+    <script>
+        //点击按钮禁用文本框
+        my$("btn1").onclick = function () {
+            my$("tt1").disabled = true;
+        };
+        //点击按钮改变北京颜色
+        my$("btn2").onclick = function () {
+            my$("dv1").className = "cls1";
+        };
+
+        //阻止超链接跳转 
+        my$("a1").onclick = function () {
+            alert("是病毒不是百度！");
+            return false;
+        };
+
+        //点击小图,跳转显示大图
+        my$("a2").onclick = function () {
+            my$("img1").src = this.href;
+            return false;
+        };
+        document.getElementsByTagName
+        //相册 点小图显示大图，小图在a里
+        var objS = my$("dv2").getElementsByTagName("a");
+        for (var i = 0; i < objS.length; i++) {
+            objS[i].onclick = function () {
+                my$("bimg").src = this.href;
+                my$("p1").innerText = this.title;
+                return false;
+            };
+        }
+        //隔行变色
+        my$("btnCC").onclick = function () {
+            var obj1 = my$("changeColor").getElementsByTagName("p");
+            for (var i = 0; i < obj1.length; i++) {
+                if (i % 2 == 0) {
+                    obj1[i].style.backgroundColor = "purple";
+                } else {
+                    obj1[i].style.backgroundColor = "orange";
+                }
+            }
+        };
+
+
+//列表高亮显示效果
+         var obj2 = my$("dv10").getElementsByTagName("li");
+         for(var i=0;i<obj2.length;i++){
+             obj2[i].onmouseover=function(){
+                 this.style.backgroundColor="red";
+             };
+             obj2[i].onmouseout=function(){
+                this.style.backgroundColor="";
+             };
+         }
+
+//显示和隐藏图片(通过设置类样式的方法)
+    my$("yy1").onmouseover=function(){
+        my$("yy2").className="dingwei xianshi";
+    };
+    my$("yy1").onmouseout=function(){
+        my$("yy2").className="dingwei yincang";
+    };    
+
+//根据name属性获取元素
+   my$("btn66").onclick=function(){
+    var obj3 = document.getElementsByName("name1");
+    console.log(obj3.length);
+    for (var i=0;i<obj3.length;i++){
+        obj3[i].value="杨超越";
+    }
+   };
+//根据类样式的名字获取元素
+
+    document.getElementById("changeColor").onclick=function() {
+        var objY=document.getElementsByClassName("yellow");
+        for (var i=0;i<objY.length;i++){
+            objY[i].style.backgroundColor="pink";
+        }
+    };
+
+//类似淘宝商品展示，高亮图片边框(重点) 默认给图片加白色2px边框，图片不抖动
+
+ var objImgs=my$("dv2").getElementsByTagName("img");
+ for(var i=0;i<objImgs.length;i++){
+     objImgs[i].onmouseover=function(){
+        this.style.border="2px solid red";
+     };
+     objImgs[i].onmouseout=function(){
+        this.style.border="";
+     };
+ }
+
+//模拟搜索框 获得焦点变黑（若默认内容是需要的，变黑了；若不需要，删除再编辑即可）失去焦点（若里面还有内容，可能是想搜的，不删；若里面没内容，恢复默认及颜色，这里要判空）
+my$("txt").onfocus=function(){
+      //  if(this.value=="杨超越"){
+       //     this.value="";
+            this.style.color="black";
+     //   }
+        
+        
+};
+my$("txt").onblur=function(){
+    if(this.value==""){
+        this.value="杨超越";
+        this.style.color="gray";
+    }
+    
+};
+
+//验证文本框密码长度
+my$("psd").onblur=function(){
+    if(this.value.length<=6||this.value.length>=15){
+        this.style.backgroundColor="red";
+    }else{
+        this.style.backgroundColor="green";
+    }
+};
+
+//获取输入内容
+my$("shuru").onclick=function(){
+   alert(document.getElementsByTagName("textarea")[0].value);
+};
+
+//tab栏
+    //获取span标签数组
+    var spanObjs=my$("biaoti").getElementsByTagName("span");
+    var neirongObjs=my$("neirong").getElementsByTagName("li");
+
+    for(var i=0;i<spanObjs.length;i++){ //为每一个span添加事件
+        spanObjs[i].setAttribute("index",i);
+        spanObjs[i].onmouseover=function(){ 
+            this.style.backgroundColor="pink";
+            var temp=this.getAttribute("index");
+             neirongObjs[temp].className="current";
+        };
+
+        spanObjs[i].onmouseout=function(){
+            for(var j=0;j<spanObjs.length;j++){
+                spanObjs[j].removeAttribute("class");
+            } 
+            for(var k=0;k<neirongObjs.length;k++){
+                neirongObjs[k].removeAttribute("class");
+          }           
+            this.style.backgroundColor="";
+           
+        };
+    }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
