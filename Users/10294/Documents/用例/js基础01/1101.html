@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>------1101节点---------</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+        #dv3 {
+        width: 300px;
+        height: 200px;
+        border: 2px solid red;
+    }
+    li {
+        list-style: none;
+        cursor: pointer;
+    }
+    #dv5 {
+        width: 300px;
+        height: 200px;
+        border: 2px solid blue;       
+    }
+    #dv6 {
+        width: 280px;
+        /* height: 200px; */ */
+        border: 2px solid green;       
+    }
+    #dv7 {
+        width: 280px;
+        height: 200px; 
+        border: 2px solid orange;       
+    }
+    
+    
+    </style>
+    <base target=_blank>
+</head>
+<!-- ------------------------------------------------------ -->
+
+<body>
+    <input type="button" value="金庸小说变色" name="" id="btn">
+    <div id="dv">
+        <span>飞狐外传</span>
+        <p>大唐双龙传</p>
+        <span>雪山飞狐</span>
+        <p>寻秦记</p>
+        <span>连城诀</span>
+        <p>四大名捕</p>
+        <span>天龙八部</span><br>
+        <a href="http://www.baidu.com">白发魔女传</a>
+    </div>
+    <hr>
+
+    <div id="dv2">
+        <input type="button" value="隔行变色" id="btn2">
+        <ul id="uu2">
+            <li>Gee</li>
+            <li>Mr.Taxi</li>
+            <li>Girls</li>
+            <li>Catch me if you can</li>
+            <li>soul</li>
+            <li>Oh</li>
+            <li>Genie</li>
+            <li>Hoot</li>
+        </ul>
+    </div>
+    <hr>
+    <input type="button" value="创建名字" id="btn3">
+    <div id="dv3"></div>
+    <hr>
+    <input type="button" value="创建元素" id="btn4">
+    <div id="dv4">
+    </div>
+    <hr>
+    <input type="button" value="创建功夫" id="btn5">
+    <div id="dv5"></div><hr>
+
+    <input type="button" value="百科导航" id="btn6">
+    <div id="dv6"></div><hr>
+
+    <input type="button" value="倒着创建" id="btn7">
+    <input type="button" value="移除第一名" id="btn8">
+    <input type="button" value="删除全部" id="btn9">
+    <input type="button" value="只有一个" id="btn10">   
+    <div id="dv7"></div>
+
+
+
+    <!-- -------------------------------------------------------------- -->
+    <script src="common.js"></script>
+    <script>
+        //span=改变背景颜色
+        var dvObj = my$("dv");
+        var nodes = dvObj.childNodes;//dv的所有子节点
+        my$("btn").onclick = function () {
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeName == "SPAN") {//拿到子节点中的span节点
+                    nodes[i].style.backgroundColor = "pink";
+                }
+            }
+        };
+        //隔行变色
+        var dvObj2 = my$("uu2");
+        var nodes2 = dvObj2.children;//uu2的所有子元素
+        my$("btn2").onclick = function () {
+            for (var i = 0; i < nodes2.length; i++) {
+                if (i % 2 == 0) {
+                    nodes2[i].style.backgroundColor = "pink";
+                } else {
+                    nodes2[i].style.backgroundColor = "purple";
+                }
+            }
+        };
+
+        //在dv3中创建ul
+        var names = ["杨过", "夏雪宜", "丁鹏", "紫衫龙王", "阿九", "乔峰", "王语嫣", "慕容复"];
+        my$("btn3").onclick = function () {
+
+            var str = "<ul style='list-style:none;cursor:pointer;''>";
+            for (var i = 0; i < names.length; i++) {
+                str += "<li>" + names[i] + "</li>";
+            }
+            str += "</ul>";
+            my$("dv3").innerHTML = str;
+            var list = my$("dv3").getElementsByTagName("li");
+            for (var i = 0; i < list.length; i++) {
+                list[i].onmouseover = function () {
+                    this.style.backgroundColor = "yellow";
+                };
+                list[i].onmouseout = function () {
+                    this.style.backgroundColor = "";
+                };
+            }
+        };
+
+        //在dv4中创建一个p
+        my$("btn4").onclick = function () {
+            var pObj = document.createElement("p");
+            setInnerText(pObj, "武侠小说");
+            my$("dv4").appendChild(pObj);
+
+
+        };
+
+        //在dv5中动态地创建一个ul>li
+        my$("btn5").onclick = function () {
+            var kungfu = ["黯然销魂掌", "斗转星移", "九阳神功", "九阴真经", " 凌波微步"];
+            var ulObj = document.createElement("ul");//
+            my$("dv5").appendChild(ulObj);
+            for (var i = 0; i < kungfu.length; i++) {
+                var liObj = document.createElement("li");
+                liObj.innerHTML = kungfu[i];
+                ulObj.appendChild(liObj);
+                liObj.onmouseover=mouseoverHandle;
+                liObj.onmouseout=mouseoutHandle;
+            }
+
+        };
+        function mouseoverHandle(){
+                this.style.backgroundColor="red";
+            }
+            function mouseoutHandle(){
+                this.style.backgroundColor="";                
+            }
+
+
+//在dv6中创建表格（百科导航）
+var daohang =[
+    {name:"金枝欲孽", href:"https://baike.baidu.com/item/%E9%87%91%E6%9E%9D%E6%AC%B2%E5%AD%BD/31181"},
+    {name:"点解阿Sir系阿Sir",href:"https://baike.baidu.com/item/%E7%82%B9%E8%A7%A3%E9%98%BFSir%E7%B3%BB%E9%98%BFSir/2116720"},
+    {name:"洪武三十二",href:"https://baike.baidu.com/item/%E6%B4%AA%E6%AD%A6%E4%B8%89%E5%8D%81%E4%BA%8C/9834506"},
+    {name:"学警狙击",href:"https://baike.baidu.com/item/%E5%AD%A6%E8%AD%A6%E7%8B%99%E5%87%BB/901909"},
+    {name:"溏心风暴",href:"https://baike.baidu.com/item/%E6%BA%8F%E5%BF%83%E9%A3%8E%E6%9A%B4/2164764"},
+    {name:"酒店风云",href:"https://baike.baidu.com/item/%E9%85%92%E5%BA%97%E9%A3%8E%E4%BA%91/8507"},
+    {name:"yummy yummy",href:"https://baike.baidu.com/item/yummy%20yummy"}
+];
+  
+my$("btn6").onclick=function(){
+    var tableObj=document.createElement("table");
+    tableObj.border="1";
+    tableObj.cellPadding="0";
+    tableObj.cellSpacing="0";
+    my$("dv6").appendChild(tableObj);
+    for(var i=0;i<daohang.length;i++){
+    var trObj=document.createElement("tr");
+    tableObj.appendChild(trObj);
+    var td1=document.createElement("td");//第一列
+        td1.innerText=daohang[i].name;
+        trObj.appendChild(td1);
+    var td2=document.createElement("td");//第二列
+        td2.innerHTML="<a href="+daohang[i].href+">"+daohang[i].name+"</a>";
+        trObj.appendChild(td2);
+    }
+};
+
+//倒着创建按钮dv7
+var i=0;
+my$("btn7").onclick=function(){
+    i++;
+    var btnNew=document.createElement("input");
+    btnNew.type="button";
+    btnNew.value="按钮"+i+"";
+    my$("dv7").appendChild(btnNew);
+    my$("dv7").insertBefore(btnNew,my$("dv7").firstElementChild);
+};
+//移除第一个
+my$("btn8").onclick=function(){
+    my$("dv7").removeChild(my$("dv7").firstElementChild);
+};
+
+//删除全部
+my$("btn9").onclick=function(){
+    while(my$("dv7").firstElementChild){
+    my$("dv7").removeChild(my$("dv7").firstElementChild);
+}
+
+};
+
+
+//只有一个
+my$("btn10").onclick=function(){
+    if(!my$("dv7").firstElementChild){
+        var btnN=document.createElement("input");
+        btnN.type="button";
+        btnN.value="按钮";
+        my$("dv7").appendChild(btnN);
+    }
+
+
+};
+
+    </script>
+</body>
+
+</html>
