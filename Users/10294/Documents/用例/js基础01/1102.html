@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>-----哈哈哈哈哈哈哈------</title>
+    <style>
+        #run {
+            position: absolute;
+
+        }
+
+        .top {
+            margin-top: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start">锦鲤大法</button>
+    <button id="stop">祈福成功</button><br>
+    <div id="run">
+        <img src="images/1.jpg" alt="" width="150" height="150">
+    </div>
+    <button id="btn1" class="top">按钮</button>
+    <button id="btn2" class="top">解绑</button><br>
+    <button id="btn3" class="top">显示</button>
+
+
+
+
+
+
+
+
+    <!-- 以上是html------------------------------------------------------------------------------------------------------- -->
+    <script src="common.js"></script>
+    <script>
+        function f1() {
+            console.log("杨超越");
+        }
+        function f2() {
+            console.log("孟美岐");
+        }
+        my$("btn1").addEventListener("click", f1, false);
+        my$("btn1").addEventListener("click", f2, false);
+        //为btn2添加onclick事件，解绑btn1的第一个事件
+        my$("btn2").onclick = function () {
+            my$("btn1").removeEventListener("click", f1, false);
+        };
+        //为同一个元素注册多个不同的点击事件指向相同的事件源
+        my$("btn3").onclick = f11;
+        my$("btn3").onmouseover = f11;
+        my$("btn3").onmouseout = f11;
+        function f11(e) {
+            switch (e.type) {
+                case "click": alert("怎么回事"); break;
+                case "mouseover": this.style.backgroundColor = "red"; break;
+                case "mouseout": this.style.backgroundColor = "green"; break;
+            }
+        }
+        my$("start").onclick = function () {
+             star=setInterval(function(){             var x = Math.random() * 800 + 1;
+            var y = Math.random() * 800 + 1;
+            my$("run").style.left = x+"px";
+            my$("run").style.top = y+"px";},300);
+
+        };
+
+my$("stop").onclick=function(){
+    clearInterval(star);
+}
+    </script>
+</body>
+
+</html>

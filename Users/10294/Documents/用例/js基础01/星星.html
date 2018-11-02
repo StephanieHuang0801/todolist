@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hhhhhh星星hhhhhh</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #star {
+            width: 1520px;
+            height: 640px;
+            position: relative;
+            /*  background-color: pink;      */
+        }
+
+        #light {
+            margin: 20px;
+            font-size: 30px;
+        }
+
+        #off {
+            margin: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="light">星星点灯</button>
+    <button id="off">天亮了</button>
+    <div id="star"> </div>
+</body>
+
+<script src="common.js"></script>
+<script>
+    my$("light").onclick = function () {
+
+        setInterval(function () {
+            pStar = document.createElement("p");
+            my$("star").appendChild(pStar);
+            setInnerText(pStar, "★");
+            pStar.style.fontSize = "30px";
+            pStar.style.color = "yellow";
+            pStar.style.position = "absolute"; 
+            var x = Math.random() * 1300;
+            var y = Math.random() * 500;
+            pStar.style.top = y + "px";
+            pStar.style.left = x + "px";
+        }, 100);
+    }
+    my$("off").onclick = function () {
+        document.body.style.backgroundColor = "white";
+        document.body.removeChild(my$("star"));
+    }
+    var dt=new Date();
+    console.log(dt);
+    var hour=dt.getHours();
+    console.log(hour);
+    var minute=dt.getMinutes();
+    console.log(minute);
+    var second=dt.getSeconds();
+    console.log(second);
+    setInterval(function(){    var dt=new Date();
+    console.log(dt);
+    var hour=dt.getHours();
+    console.log(hour);
+    var minute=dt.getMinutes();
+    console.log(minute);
+    var second=dt.getSeconds();
+    console.log(second); },1000);
+    </script>
+
+</html>
