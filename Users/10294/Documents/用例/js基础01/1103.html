@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>哈哈哈哈哈哈1103=========></title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+        #txt1 {
+        background: rgba(255, 0, 0, 1);
+        color:red;
+    } 
+    #dv2 {
+        width: 0;
+        height: 200px;
+        position: absolute;
+        background-color: red;
+        top:215px;
+        z-index: -999;
+    }
+    #wenzi {
+        font-size: 60px;
+        color: white;
+        width: 800px;
+        height: 100px;
+        line-height: 100px;
+        margin-left: 30px;
+        text-align: center;
+        /* z-index: 999; */
+    }
+    #dv3 {
+        position: relative;
+    }
+    #dv3 img {
+        position: absolute;
+        top: 200px;
+    }
+    #btn3 {
+        position: absolute;
+        top: 450px;
+    }
+    #btn4 {
+        position: absolute;
+        top: 450px;
+        left: 200px;
+
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- 定时器案例一，阅读协议倒数 -->
+    <div id="dv1">
+        <textarea name="" id="txt1" cols="30" rows="10">《葵花宝典》                 【先诀】欲练神功，引刀自宫；炼丹服药，内外齐通。今练气之道，不外存想导引，渺渺太虚，天地分清浊而生人，人之练气，不外练虚灵而涤荡昏浊，气者命之主，形者体之用。</textarea><br>
+        <button id="btn1">阁下确定要练《葵花宝典》吗（5）</button>
+
+    </div>
+    <!-- div变宽 -->
+    <button id="btn2">展开</button>
+    <div id="dv2"></div>
+    <p id="wenzi">锦&nbsp&nbsp&nbsp&nbsp绣&nbsp&nbsp&nbsp&nbsp良&nbsp&nbsp&nbsp&nbsp缘</p>
+    <!-- 盒子位移 -->
+    <button id="btn3">移动400px</button>
+    <button id="btn4">移动800px</button>
+    <div id="dv3">
+            <img id="img1" src="images/2.jpg" width="100" height="100" alt="">
+    </div>
+
+
+
+
+</body>
+<script src="common.js"></script>
+<script>
+    var time = 5;
+    var opa = 10;
+    my$("btn1").disabled = true;//time,disabled要写在外面
+    var timeId = setInterval(
+        function () {
+            time--; 
+            setInnerText(btn1, "阁下确定要练《葵花宝典》吗（" + time + "）"); 
+            if (time <= 0) { 
+                my$("btn1").disabled = false; 
+                clearInterval(timeId); 
+                setInnerText(btn1, "我是女的") 
+            };
+        }, 1000);
+        var opaId=setInterval(
+            function(){
+                opa--;
+                my$("txt1").style.background="rgba(255,0,0,"+opa/10+")";
+                if(opa<=0){
+                    clearInterval(opaId);
+                }
+
+            },500);
+
+
+
+    my$("btn2").onclick = function () {
+        var wOpa=0;
+        wOpa+=10;
+        var widthId=setInterval(function(){
+            wOpa+=10;
+            my$("dv2").style.width=""+wOpa+"px"; 
+            if(wOpa=850){
+                clearInterval("widthId");
+            }
+         },500);        
+    }
+//在dv3中点击btn3，btn4让图片img1移动
+my$("btn3").onclick=function(){
+    animate(my$("img1"),400);
+};//click事件的括号
+my$("btn4").onclick=function(){
+    animate(my$("img1"),800);
+};//click事件的括号
+function animate(element,target){
+    clearInterval(element.timeId);
+    element.timeId=setInterval(
+        function(){
+            var step=10;
+            var current=element.offsetLeft;
+            step=target>current?step:-step;
+            current+=step;
+            if(Math.abs(target-current)>Math.abs(step)){
+                element.style.left=current+"px";
+            }else{
+                element.style.left=target+"px";
+                clearInterval(element.timeId);
+
+            }
+        },50);
+}
+
+</script>
+
+</html>
