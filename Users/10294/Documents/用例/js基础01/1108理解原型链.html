@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Supertype() {
+        //     this.property = "Dad";
+        //     this.arr = [0, 1, 2];
+        // }
+        // var s1 = new Supertype();
+        // s1.property = "Mommy"
+        // console.log("1:" + s1.property);
+        // console.log("1:" + s1.arr);
+        // s1.arr.push("what");
+        // console.log("1:" + s1.arr);
+        // var s2 = new Supertype();
+        // console.log("2:" + s2.property);
+        // console.log("2:" + s2.arr);//实例对象对引用类型的修改不会影响它的初始值
+        // //假设出现继承
+        // function Subtype() {
+
+        // }
+        // Subtype.prototype = new Supertype();
+        // var son1 = new Subtype();
+        // console.log("son1:" + son1.arr);
+        // son1.arr.push("exo me");
+        // console.log("son1:" + son1.arr);
+        // var son2 = new Subtype();
+        // console.log("son2:" + son2.arr);  //但是如果继承子类的实例对象修改了引用类型，则引用类型改变（子类型的实例对象共享）注意：可以通过借用构造函数解决
+        // var s3 = new Supertype();
+        // console.log("3:" + s3.arr);//但是在此之后再实例化父类型，仍不变（父类型的实例对象，不共享）
+
+        //带参数的自定义构造函数 原型链在创建子类型的实例时，不能向超类型的构造函数中传递参数
+
+        // function Supertype() {
+        //     this.name = "黄瀛";
+        // }
+        // function Subtype() {
+        //     // this.name = name;
+        // }
+        // Subtype.prototype = new Supertype();
+        // // var s1=new Subtype("蒋婷婷");
+        // // console.log("s1:"+s1.name);//蒋婷婷
+        // var s2=new Subtype();
+        // console.log("s2没传值:"+s2.name);//undefined
+        //带参数的自定义构造函数，子类在实例化时，没传值就undefined，若不带参数，没传值时找到父类的属性
+
+
+        function Supertype(name) {
+            this.name = name;
+        }
+        function Subtype(name) {
+            this.name = name;
+        }
+        Subtype.prototype = new Supertype("黄瀛");
+        var s= new Supertype();//undefined
+        console.log("s:"+s.name);
+        var ss=new Supertype();
+        console.log("ss:"+ss.name);//undefined
+        var s1=new Subtype("蒋婷婷");
+        console.log("s1:"+s1.name);//蒋婷婷
+        var s2=new Subtype();
+        console.log("s2没传值:"+s2.name);//undefined
+        //子类在继承时，给父类传的参数好像用不上？
+        
+
+
+
+
+    </script>
+</body>
+
+</html>
