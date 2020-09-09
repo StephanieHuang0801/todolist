@@ -8,50 +8,6 @@
     <title>越越抽奖哈哈哈哈嗝！</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: pink;
-            box-sizing: border-box;
-        }
-
-        #main {
-            width: 1525px;
-            height: 710px;
-            border: 3px solid red;
-            position: relative;
-
-        }
-        #time {
-            width: 350px;
-            height: 80px;
-            border: 3px dotted blue;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            padding-left: 5px;
-        }
-        .yangzi {
-            height: 70px;
-            width: 30px;
-            display: inline-block;
-            border: 2px solid black;
-            margin: 3px 5px 5px 0;
-        
-        }
-        .wenzi {
-            position: absolute;
-            width: 1525px;
-            height: 710px;
-            line-height: 710px;
-            font-size: 100px;
-            color:red;
-            text-align: center;
-
-        }
     </style>
 </head>
 
@@ -72,54 +28,6 @@
 
     <script>
 
-    setInterval(time,1000);
-
-    function time(){
-     var dt=new Date();
-     var hour=dt.getHours();
-     var minute=dt.getMinutes();
-     var second=dt.getSeconds();
-
-     //console.log(second);
-     if (hour<10){
-        my$("img1").src="shuzi/0.png";
-        my$("img2").src="shuzi/"+hour+".png";
-    }else{       
-        my$("img1").src="shuzi/"+parseInt(hour/10)+".png";
-        my$("img2").src="shuzi/"+hour%10+".png";
-    }
-    if(minute<10){
-        my$("img4").src="shuzi/0.png";
-        my$("img5").src="shuzi/"+minute+".png";
-    }else{
-        my$("img4").src="shuzi/"+parseInt(minute/10)+".png";
-        my$("img5").src="shuzi/"+minute%10+".png";
-    }
-    if(second<10&&second>0){ //01 02 03 04 05 06 07 08 09
-        my$("img7").src="shuzi/0.png";
-        my$("img8").src="shuzi/"+second+".png";
-    }
-    //else if(second==0){ //0
-    //     my$("img7").src="shuzi/0.png";
-    //     my$("img8").src="shuzi/0.png";  }      
-    else{ //10 11 12 59
-        my$("img7").src="shuzi/"+parseInt(second/10)+".png";
-        my$("img8").src="shuzi/"+second%10+".png";
-
-    }
-    console.log(dt);
-
-
-    }
-
-
-    
-    
-    
-    
-    
-    
-    
     
     </script>
     <script src="common.js"></script>
